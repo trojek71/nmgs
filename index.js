@@ -8,7 +8,7 @@ import cors from "cors";
 import schema from "./graphql/";
 
 const app = express();
-const PORT = process.env.PORT || "4040";
+//const PORT = process.env.PORT || "4040";
 
 
 // Connect to MongoDB with Mongoose.
@@ -35,4 +35,4 @@ app.use(
   })
 );
 
-app.listen(PORT, () => console.log(`🚀 Graphql Server running on port ${PORT}`));
+app.listen(process.env.PORT, () => console.log(`🚀 Graphql Server running on port ${process.env.PORT}`));
