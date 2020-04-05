@@ -21,7 +21,7 @@ mongoose
       useUnifiedTopology: true
     }
   )
-  .then(() => console.log("MongoDB connected"))
+  .then(() => console.log("💻 MongoDB connected at ",process.env.DB_URI))
   .catch(err => console.log(err));
 
 
