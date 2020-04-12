@@ -1,4 +1,5 @@
 
+import Int32 from "mongoose-int32";
 export default `
 input inputAddr{
   city:String
@@ -10,10 +11,11 @@ type Addr{
 }
 
   type User {
-    id: String!
-    name: String!
-    email: String!
+    id: String
+    name: String
+    email: String
     address: Addr
+    userId:String
   }
   type Query {
     user(id: String!): User
@@ -22,6 +24,6 @@ type Addr{
   type Mutation {
     addUser(id: String!, name: String!, email: String!,address:inputAddr): User
     editUser(id: String, name: String, email: String,address:inputAddr): User
-    deleteUser(id: String, name: String, email: String,address:inputAddr): User
+    deleteUser(id: String, name: String, email: String,address:inputAddr,userId:String): User
   }
 `;
