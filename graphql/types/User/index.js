@@ -11,19 +11,20 @@ type Addr{
 }
 
   type User {
-    id: String
+    
+    userId:String
     name: String
     email: String
     address: Addr
-    userId:String
+    
   }
   type Query {
-    user(id: String!): User
+    user(name: String!): User
     users: [User]
   }
   type Mutation {
-    addUser(id: String!, name: String!, email: String!,address:inputAddr): User
-    editUser(id: String, name: String, email: String,address:inputAddr): User
-    deleteUser(id: String, name: String, email: String,address:inputAddr,userId:String): User
+    addUser(userId:String, name: String!, email: String!,address:inputAddr): User
+    editUser(userId:String, name: String, email: String,address:inputAddr): User
+    deleteUser(userId:String, name: String, email: String,address:inputAddr,userId:String): User
   }
 `;

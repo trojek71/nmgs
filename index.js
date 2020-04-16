@@ -10,7 +10,7 @@ import schema from "./graphql/";
 const app = express();
 //const PORT = process.env.PORT || "4040";
 
-
+mongoose.set('useFindAndModify', false);
 // Connect to MongoDB with Mongoose.
 mongoose
   .connect(

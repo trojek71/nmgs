@@ -6,12 +6,7 @@ const Schema = mongoose.Schema;
 autoIncrement.initialize(mongoose.connection);
 // Create the User Schema.
 const UserSchema = new Schema({
-  id: {
-    type: String,
-    required: false,
-    unique: true
-  },
-  userId:String,
+ 
   name: {
     type: String,
     required: true

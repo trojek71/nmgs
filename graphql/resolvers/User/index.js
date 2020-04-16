@@ -21,8 +21,8 @@ export default {
     }
   },
   Mutation: {
-    addUser: (root, { id, name, email,address,userId }) => {
-      const newUser = new User({ id, name, email,address,userId });
+    addUser: (root, { name, email,address,userId }) => {
+      const newUser = new User({  name, email,address,userId });
 
       return new Promise((resolve, reject) => {
         newUser.save((err, res) => {
@@ -30,9 +30,9 @@ export default {
         });
       });
     },
-    editUser: (root, { id, name, email }) => {
+    editUser: (root, { userId, name, email,address }) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndUpdate({ id }, { $set: { name, email } }).exec(
+        User.findOneAndUpdate({ name}, { $set: { userId,name, email,address } }).exec(
           (err, res) => {
             err ? reject(err) : resolve(res);
           }
