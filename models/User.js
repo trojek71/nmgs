@@ -24,7 +24,7 @@ const UserSchema = new Schema({
 UserSchema.plugin(autoIncrement.plugin,{
   model :"User",
   field: "userId",
-  startAt:77,
+  startAt:0,
   incrementBy:1
 });
 const User = mongoose.model("User", UserSchema);

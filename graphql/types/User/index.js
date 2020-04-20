@@ -19,7 +19,7 @@ type Addr{
     
   }
   type Query {
-    user(name: String!): User
+    user(name:String,userId:String): User
     users: [User]
   }
   type Mutation {
