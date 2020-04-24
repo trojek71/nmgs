@@ -39,9 +39,9 @@ export default {
         );
       });
     },
-    deleteUser: (root, {userId}) => {
+    deleteUser: (root, {name}) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndRemove({userId}).exec((err, res) => {
+        User.findOneAndRemove({name}).exec((err, res) => {
           err ? reject(err) : resolve(res);
         });
       });
