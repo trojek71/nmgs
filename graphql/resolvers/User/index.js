@@ -1,4 +1,5 @@
 // The User schema.
+//
 import User from "../../../models/User";
 
 export default {
